@@ -1,0 +1,23 @@
+icp_weights:
+  problem_severity: 0.15
+  problem_frequency: 0.10
+  product_fit: 0.15
+  willingness_to_pay: 0.15
+  urgency: 0.10
+  accessibility: 0.10
+  market_size: 0.05
+  competition: 0.05
+  retention_potential: 0.10
+  strategic_fit: 0.05
+
+persona_weights:
+  pain_intensity: 0.30
+  decision_influence: 0.20
+  purchase_influence: 0.20
+  accessibility: 0.15
+  message_resonance: 0.15
+
+thresholds:
+  primary_icp_min: 75
+  secondary_icp_min: 50
+  avoid_icp_max: 40
