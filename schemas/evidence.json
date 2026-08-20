@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EvidenceSchema",
+  "type": "object",
+  "properties": {
+    "evidence_id": { "type": "string", "pattern": "^EV-[0-9]{3}$" },
+    "source_type": { "type": "string", "enum": ["customer_interview", "crm", "survey", "support_ticket", "review", "forum", "job_posting", "industry_report"] },
+    "source_name": { "type": "string" },
+    "observed_at": { "type": "string", "format": "date-time" },
+    "content": { "type": "string" },
+    "raw_quote": { "type": "string" }
+  },
+  "required": ["evidence_id", "source_type", "source_name", "content"]
+}
