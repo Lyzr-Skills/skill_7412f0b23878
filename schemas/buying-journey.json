@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BuyingJourneySchema",
+  "type": "object",
+  "properties": {
+    "stage": { "type": "string", "enum": ["trigger", "recognition", "research", "shortlist", "evaluation", "objections", "decision", "purchase", "adoption", "retention"] },
+    "buyer_questions": { "type": "array", "items": { "type": "string" } },
+    "emotional_state": { "type": "string" },
+    "information_needs": { "type": "array", "items": { "type": "string" } },
+    "channels": { "type": "array", "items": { "type": "string" } },
+    "required_proofs": { "type": "array", "items": { "type": "string" } }
+  },
+  "required": ["stage", "buyer_questions", "information_needs", "channels"]
+}
