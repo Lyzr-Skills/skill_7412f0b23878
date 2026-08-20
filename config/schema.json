@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SkillConfigSchema",
+  "type": "object",
+  "properties": {
+    "pipeline": {
+      "type": "object",
+      "properties": {
+        "strict_mode": { "type": "boolean" },
+        "confidence_threshold": { "type": "number" }
+      }
+    }
+  },
+  "required": ["pipeline"]
+}
