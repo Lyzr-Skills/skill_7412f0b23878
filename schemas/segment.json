@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SegmentSchema",
+  "type": "object",
+  "properties": {
+    "segment_id": { "type": "string", "pattern": "^SEG-[0-9]{3}$" },
+    "signal_refs": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^SIG-[0-9]{3}$" }
+    },
+    "name": { "type": "string" },
+    "firmographics": {
+      "type": "object",
+      "properties": {
+        "industries": { "type": "array", "items": { "type": "string" } },
+        "employee_range": { "type": "string" }
+      }
+    },
+    "fit_score": { "type": "number", "minimum": 0, "maximum": 100 }
+  },
+  "required": ["segment_id", "signal_refs", "name", "fit_score"]
+}
