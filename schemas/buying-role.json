@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BuyingRoleSchema",
+  "type": "object",
+  "properties": {
+    "persona_id": { "type": "string", "pattern": "^PER-[0-9]{3}$" },
+    "is_user": { "type": "boolean" },
+    "is_champion": { "type": "boolean" },
+    "is_buyer": { "type": "boolean" },
+    "is_evaluator": { "type": "boolean" },
+    "is_blocker": { "type": "boolean" }
+  },
+  "required": ["persona_id", "is_user", "is_champion", "is_buyer", "is_evaluator", "is_blocker"]
+}
