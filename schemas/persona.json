@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PersonaSchema",
+  "type": "object",
+  "properties": {
+    "persona_id": { "type": "string", "pattern": "^PER-[0-9]{3}$" },
+    "signal_refs": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^SIG-[0-9]{3}$" }
+    },
+    "role": { "type": "string" },
+    "responsibilities": { "type": "array", "items": { "type": "string" } },
+    "goals": { "type": "array", "items": { "type": "string" } },
+    "pain_points": { "type": "array", "items": { "type": "string" } },
+    "jobs_to_be_done": { "type": "array", "items": { "type": "string" } },
+    "triggers": { "type": "array", "items": { "type": "string" } },
+    "desired_outcomes": { "type": "array", "items": { "type": "string" } },
+    "confidence": { "type": "string", "enum": ["verified", "observed", "inferred", "hypothesis", "unknown", "contradictory"] }
+  },
+  "required": ["persona_id", "signal_refs", "role", "confidence"]
+}
