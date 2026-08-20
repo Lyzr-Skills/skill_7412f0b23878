@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ChannelSchema",
+  "type": "object",
+  "properties": {
+    "persona_id": { "type": "string", "pattern": "^PER-[0-9]{3}$" },
+    "channel_name": { "type": "string" },
+    "content_format": { "type": "string" },
+    "messaging_angle": { "type": "string" },
+    "evidence_refs": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^EV-[0-9]{3}$" }
+    }
+  },
+  "required": ["persona_id", "channel_name", "content_format", "messaging_angle", "evidence_refs"]
+}
