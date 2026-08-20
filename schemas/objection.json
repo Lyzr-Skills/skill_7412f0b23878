@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ObjectionSchema",
+  "type": "object",
+  "properties": {
+    "persona_id": { "type": "string", "pattern": "^PER-[0-9]{3}$" },
+    "category": { "type": "string", "enum": ["price", "trust", "switching_cost", "complexity", "security", "integration", "timing", "politics", "risk", "incumbent"] },
+    "raw_objection": { "type": "string" },
+    "mitigation_strategy": { "type": "string" },
+    "evidence_refs": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^EV-[0-9]{3}$" }
+    }
+  },
+  "required": ["persona_id", "category", "raw_objection", "mitigation_strategy", "evidence_refs"]
+}
