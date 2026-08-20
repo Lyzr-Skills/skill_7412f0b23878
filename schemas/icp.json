@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ICPSchema",
+  "type": "object",
+  "properties": {
+    "icp_id": { "type": "string", "pattern": "^ICP-[0-9]{3}$" },
+    "segment_refs": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^SEG-[0-9]{3}$" }
+    },
+    "name": { "type": "string" },
+    "firmographics": { "type": "object" },
+    "demographics": { "type": "object" },
+    "technographics": { "type": "object" },
+    "behavioral_characteristics": { "type": "array", "items": { "type": "string" } },
+    "jobs_to_be_done": { "type": "array", "items": { "type": "string" } },
+    "pain_intensity": { "type": "string" },
+    "buying_signals": { "type": "array", "items": { "type": "string" } },
+    "budget_potential": { "type": "string" },
+    "urgency": { "type": "string" },
+    "accessibility": { "type": "string" },
+    "product_fit": { "type": "string" },
+    "strategic_fit": { "type": "string" },
+    "disqualifiers": { "type": "array", "items": { "type": "string" } },
+    "confidence": { "type": "string", "enum": ["verified", "observed", "inferred", "hypothesis", "unknown", "contradictory"] }
+  },
+  "required": ["icp_id", "segment_refs", "name", "confidence"]
+}
