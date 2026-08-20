@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BuyingTriggerSchema",
+  "type": "object",
+  "properties": {
+    "trigger_id": { "type": "string" },
+    "type": { "type": "string", "enum": ["internal", "external", "event_based"] },
+    "description": { "type": "string" },
+    "evidence_refs": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^EV-[0-9]{3}$" }
+    }
+  },
+  "required": ["trigger_id", "type", "description", "evidence_refs"]
+}
