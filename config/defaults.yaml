@@ -1,0 +1,6 @@
+pipeline:
+  strict_mode: true
+  confidence_threshold: 0.70
+  enable_drift_detection: true
+  historic_snapshot_limit: 5
+  contradiction_handling: "split_segment"
